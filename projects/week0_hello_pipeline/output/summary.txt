@@ -1,0 +1,9 @@
+Hello Pipeline — Summary
+------------------------
+Total people: 5
+Missing age count: 1
+Vaccination counts:
+  yes: 0
+  no: 0
+  unknown: 5
+Vaccinated rate (known only): 0.00%

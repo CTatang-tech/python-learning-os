@@ -1,0 +1,6 @@
+-navigation and workflow to generate example codes per tiny idea of a concept during microtest session during sandbox session
+-navigation and workflow to generate example code to intentional break something
+-organize the set of prompts to actual actually use during sandbox session
+-navigation and workflow on prediction cell (markdown) and result + takeaway cell (markdown) during sandbox session
+- navigation and work flow of when to practice on the terminal
+-navigation and work flow for a session header in notebook

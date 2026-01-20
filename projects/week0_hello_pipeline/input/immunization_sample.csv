@@ -1,0 +1,6 @@
+person_id,age,vaccinated
+1,12,yes
+2,34,no
+3,,yes
+4,70,yes
+5,5,no

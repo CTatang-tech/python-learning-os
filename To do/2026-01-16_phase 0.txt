@@ -1,0 +1,8 @@
+- Arrange final prompt reusable prompt list file (tutor, reviewer,etc)
+- fill broken_example.py
+- fill test_*.py
+- start from phase 0 
+- start with concept template 
+- do debug.py per phase
+- do temp.py per phase
+

@@ -1,0 +1,74 @@
+**Date:** 2026-01-12 (Europe/London)  
+**Session:** Phase 1 / Week 1  
+**Topic:** Variables (names - values - memory)
+
+## Primary Learning Target:
+Understand Python variables as names bound to values in memory, and distinguish assignment from evaluation.
+
+## Primary Project Task:
+Build and validate a sandbox notebook for micro-testing variable behavior and predictions.
+
+## Secondary Goal:
+Practice predicting code behavior before execution to strengthen mental models.
+
+##  Accomplishments
+- Concepts Studied (Reflected in notes/)
+
+- Core Concept: Variables
+
+- Key Insight 1:
+A variable is not a box—it is a name (label) that points to a value in memory.
+
+- Key Insight 2:
+The = operator means assignment, not “equals”; Python evaluates the right-hand side first, then binds the name on the left.
+
+- Additional understanding gained:
+
+Variables must be assigned before use
+
+Reassignment changes the binding, not the value itself
+
+Errors feel less “mysterious” once execution order is understood
+
+## Tasks Completed (Reflected in sandbox.ipynb)
+
+- Created a structured sandbox notebook session header (goal, questions, predictions)
+
+- Ran multiple micro-test cells using simple assignments (x = 5, y = x + 2)
+
+- Practiced prediction → execution → explanation workflow for each cell
+
+- Documented observations in plain English after execution
+
+## Challenges & Blockers
+
+- Problem Encountered:
+Initial tendency to think of = as a mathematical equality instead of assignment.
+
+- Resolution / Lesson Learned:
+Always read = as “is assigned to” and trace execution top-to-bottom.
+
+- Next Steps on Blockers:
+Reinforce this mental model when moving to expressions, types, and reassignment.
+
+## Time & Metrics
+
+Total Focused Learning Time: ~1.5 hours
+
+Project Code / Testing Time: ~1 hour
+
+Energy Level (1–5): 4
+
+## Rules I learned 
+
+- A variable must be assigned before it can be used; otherwise, a NameError occurs.
+
+- Always read = as “is assigned to”
+
+## Plan for Tomorrow (2025-12-18)
+
+High Priority Task 1:
+Extend sandbox to types (int, float, str, bool) and observe how variables bind to different object types.
+
+High Priority Task 2:
+Introduce intentional errors (e.g., using undefined variables) and practice reading tracebacks calmly.

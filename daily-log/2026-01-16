@@ -1,0 +1,88 @@
+# Daily Learning Log — Day 1:2026-01-16
+
+## Session Goals for Today
+understand what Python is used for and how it executes code top-to-bottom.
+**Focus topics:**
+Python execution model.
+**What I plan to do:**
+- Read concept note on python execution model
+- Write execution predictions before running each cell
+- Trigger a NameError by using a variable before definition
+- Reorder code to make it work
+- Explain each outcome in plain English
+
+**Succes criteria:**
+- I can explain how Python moves line by line through code
+- I can predict when a NameError will occur before execution
+- I can explain why reordering lines fixes errors
+- I recorded at least one reusable execution rule
+
+--- 
+
+## Accomplishments
+
+### Concepts Studied
+
+**Core concepts:**
+- Python execution model (how python executes code)
+
+**key insights:**
+
+---
+
+### tasks completed
+- Opened Jupyter Notebook
+- 
+
+---
+
+### Snippet of Code & Experiments
+print("Hello, Python")
+print(2 + 3)
+
+**notes:**
+Expected: Python prints results  
+Observed: Code executes in order, line by line
+Error message:
+
+---
+
+## Challenges & Blockers
+problem encountered and resolution
+
+**problem:**
+
+**resolution/lesson learned**
+
+---
+
+## AI Help Used
+- “Explain how Python runs code like I’m 10”
+- “Difference between script and notebook”
+- Generate 3 execution-order mistakes beginners make
+- Create a notebook-specific execution trap
+
+
+**Key insights:**
+- Python executes top-to-bottom
+- Notebooks allow reordering, scripts don’t
+
+---
+
+## What I Understand Now
+- Python is used for automation, data, APIs, analytics
+- Code runs line by line
+- Order matters
+
+---
+
+## 🧠 Rules I Learned
+- Python executes code in order
+- Notebooks can hide execution order bugs
+
+---
+
+## Next Session
+Variables and NameError
+
+---
