@@ -1,20 +1,34 @@
-**Date:** 2026-01-12 (Europe/London)  
-**Session:** Phase 1 / Week 1  
-**Topic:** Variables (names - values - memory)
 
-## Primary Learning Target:
-Understand Python variables as names bound to values in memory, and distinguish assignment from evaluation.
+# Daily Learning Log — Day 2:2026-01-19
 
-## Primary Project Task:
-Build and validate a sandbox notebook for micro-testing variable behavior and predictions.
+## Session Goals for Today
+Understand what a variable is, when it comes into existence, and why Python raises a NameError when you use one too early.
 
-## Secondary Goal:
-Practice predicting code behavior before execution to strengthen mental models.
+**Focus topics:**
+- Variables
+- Name binding (when a variable is created)
+- NameError as an execution-time error
+- Top-to-bottom execution
+
+**What I plan to do:**
+- Read concept note on Variables & NameError in Python
+- Write execution predictions before running each cell
+- Trigger a NameError by using a variable before definition
+- Reorder code to make it work
+- Explain each outcome in plain English
+
+**Succes criteria:**
+- I can explain how Python moves line by line through code
+- I can predict when a NameError will occur before execution
+- I can explain why reordering lines fixes errors
+- I recorded at least one reusable execution rule
+
+--- 
 
 ##  Accomplishments
 - Concepts Studied (Reflected in notes/)
 
-- Core Concept: Variables
+- Core Concept: Variables and NameError
 
 - Key Insight 1:
 A variable is not a box—it is a name (label) that points to a value in memory.

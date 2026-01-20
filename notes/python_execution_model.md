@@ -76,8 +76,8 @@ Python does NOT look ahead. It only knows what has already executed.
 ---
 
 ### Related Concepts
-- variables & types
-- errors & tracebacks
+- [[variables_and_type]]
+- [[errors_and_tracebacks]] 
 
 ---
 

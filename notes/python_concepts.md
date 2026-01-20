@@ -3,14 +3,14 @@
 This file indexes all evergreen Python concept notes.
 
 ## Core Language
-- [Python execution model](python_execution_model.md)
-- Variables 
-- Data types 
-- Expressions
-- Statements
-- [Data Structures](data_structures.md)
+- [Python Execution Model](python_execution_model.md)
+- [Variables and NameError](variables_and_nameerror.md)
+- [Data types and TypeError](types_and_typeerror.md) 
+- [Expression vs Statements & Tracebacks](expressions_vs_statement_and_tracebacks.md)
+- [Data flow and mini pipeline](dataflow_and_minipipelines.md)
 - [Control Flow](control_flow.md)
 - [Functions](functions.md)
+- [Data Structures](data_structures.md)
 - [Errors & Tracebacks](errors_and_tracebacks.md)
 
 ## Object-Oriented Programming

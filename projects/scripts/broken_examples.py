@@ -11,3 +11,6 @@ print("End")   # never runs
 x = x + 1
 x = 10
 
+# BE04 - SuyntaxError (malformed statement)
+if 3 > 2
+print("yes")

@@ -1,3 +1,4 @@
+
 # Daily Learning Log — Day 1:2026-01-16
 
 ## Session Goals for Today
@@ -60,8 +61,7 @@ problem encountered and resolution
 - “Explain how Python runs code like I’m 10”
 - “Difference between script and notebook”
 - Generate 3 execution-order mistakes beginners make
-- Create a notebook-specific execution trap
-
+- Create a notebook-specific execution trap 
 
 **Key insights:**
 - Python executes top-to-bottom
@@ -83,6 +83,6 @@ problem encountered and resolution
 ---
 
 ## Next Session
-Variables and NameError
+Variables and types
 
 ---
