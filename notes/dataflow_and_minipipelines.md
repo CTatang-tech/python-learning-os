@@ -42,3 +42,8 @@ Trying to be “clever” too early.
 - Start simple
 - Make each step explicit
 - Handle bad data early
+- Data must exist BEFORE a step uses it (or NameError happens).
+- Expressions produce VALUES; statements perform ACTIONS (assign/print/if/for/def/import).
+- Order matters: pipelines are linear; each step depends on the previous step’s output.
+- Type matters: wrong types cause TypeError OR silent logic bugs.
+- Parentheses change evaluation order and can change results.

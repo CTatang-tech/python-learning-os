@@ -56,36 +56,143 @@ Why some lines “show a value” in the notebook
 Why others don’t show anything unless printed
 
 **Planned Experiments**
-- Experiment 1: Expressions vs. Statements
+**Experiment 1**: Expressions vs. Statements
 
-Write 5 expressions (e.g., 2 + 3, "hello".upper()) and predict their values.
-Write 5 statements (e.g., x = 5, print("hi")) and predict what they do (no output value).
-Mix them in code and predict the overall behavior.
+- Write 5 expressions (e.g., 2 + 3, "hello".upper()) and predict their values.
 
--Experiment 2: Triggering Tracebacks
+```python
+# EXPRESSION = produces a VALUE
 
-Intentionally cause a NameError (e.g., reference undefined variable).
-Cause a TypeError in an expression (e.g., invalid operation on types).
-Cause a SyntaxError (e.g., malformed statement).
+2 + 3
+"hello".upper()
+len([1, 2, 3, 4])
+3 > 10
+(10 // 3) + (10 % 3)
+```
+
+- Write 5 statements (e.g., x = 5, print("hi")) and predict what they do (no output value).
+
+```python
+# STATEMENT = does an ACTION (may not "return a value" you keep)
+
+x = 5
+print("hi")
+y = x + 2
+if y > 5:
+    print("y is big")
+for i in range(2):
+    print("loop", i)
+```
+
+- Mix them in code and predict the overall behavior.
+
+```python
+x = 10
+x + 5
+print(x)
+x = x + 5
+print(x)
+x * 2
+```
+
+**Experiment 2**: Triggering Tracebacks
+
+- Intentionally cause a NameError (e.g., reference undefined variable).
+
+```python
+print(user_score)   # not defined yet
+user_score = 10
+```
+
+- Cause a TypeError in an expression (e.g., invalid operation on types).
+
+```python
+age = "12"
+print(age + 3)
+```
+
+- Cause a SyntaxError (e.g., malformed statement).
+
+```python
+if 3 > 2
+    print("yes")
+```
+
 Analyze each traceback: What was Python trying to do? Where did it fail?
 
-Experiment 3: Expression Evaluation Order
+**Experiment 3**: Expression Evaluation Order
 
-Predict the result of complex expressions (e.g., 5 + 3 * 2, function calls).
-Use parentheses to change order and predict differences.
-Test with variables: x = 10; y = x + 5; print(y).
+- Predict the result of complex expressions (e.g., 5 + 3 * 2, function calls). Use parentheses to change order and predict differences.
 
-Experiment 4: Statements in Sequence
+```python
+5 + 3 * 2
+(5 + 3) * 2
+10 - 4 / 2
+(10 - 4) / 2
+```
 
-Write a sequence of statements and predict the final state of variables.
+- Test with variables: x = 10; y = x + 5; print(y).
+
+```python
+x = 10
+y = x + 5
+print(y)
+```
+- Function calls inside expressions
+
+```python
+def f():
+    print("f ran")
+    return 10
+
+def g():
+    print("g ran")
+    return 2
+
+result = f() + g() * 3
+print("result =", result)
+```
+
+**Experiment 4**: Statements in Sequence
+
+- Write a sequence of statements and predict the final state of variables.
 Include assignments, prints, and conditionals (if simple).
 Run and chec
 
-Experiment 5: Debugging with Tracebacks
+```python
+x = 1
+print("start", x)
+
+x = x + 2
+print("after add", x)
+
+if x > 2:
+    x = x * 10
+
+print("final", x)
+```
+
+**Experiment 5**: Debugging with Tracebacks
 
 Write buggy code, run it, and use the traceback to fix it.
 Focus on one error type per run (e.g., fix TypeError by casting).
 Record: Original error, fix applied, lesson learned.
+
+- Bug 1: TypeError → fix by casting
+```python
+count = "5"
+total = count + 2
+print(total)
+```
+Fix goal: make it print 7.
+
+- Example fix (after you see the traceback):
+
+```python
+count = "5"
+total = int(count) + 2
+print(total)
+```
 
 **Succes criteria:**
 ✔ I can explain what an expression is in simple words

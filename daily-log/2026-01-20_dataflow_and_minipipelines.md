@@ -1,5 +1,5 @@
 
-# Daily Learning Log — Day 1:2026-01-20
+# Daily Learning Log — Date: 2026-01-20
 
 ## Session Goals for Today
 Understand how data moves through a sequence of Python steps, and how small, linear pipelines are built, broken, and fixed.
@@ -85,42 +85,94 @@ Why Python behaved the way it did?
 No jargon. Imagine explaining to a non-programmer.
 
 **Planned Experiments**
-- Experiment 1: Expressions vs. Statements
 
-Write 5 expressions (e.g., 2 + 3, "hello".upper()) and predict their values.
-Write 5 statements (e.g., x = 5, print("hi")) and predict what they do (no output value).
-Mix them in code and predict the overall behavior.
+Core "Fragile Pipeline" Drill
 
--Experiment 2: Triggering Tracebacks
+---
 
-Intentionally cause a NameError (e.g., reference undefined variable).
-Cause a TypeError in an expression (e.g., invalid operation on types).
-Cause a SyntaxError (e.g., malformed statement).
-Analyze each traceback: What was Python trying to do? Where did it fail?
+- Build a tiny pipeline (print every stage)
 
-Experiment 3: Expression Evaluation Order
+```python
 
-Predict the result of complex expressions (e.g., 5 + 3 * 2, function calls).
-Use parentheses to change order and predict differences.
-Test with variables: x = 10; y = x + 5; print(y).
+print("=== FRAGILE PIPELINE (WORKING VERSION) ===")
 
-Experiment 4: Statements in Sequence
+raw_value = " 70 "                 # raw input (string with spaces)
+print("Step 1 raw_value:", raw_value, type(raw_value))
 
-Write a sequence of statements and predict the final state of variables.
-Include assignments, prints, and conditionals (if simple).
-Run and chec
+cleaned_value = raw_value.strip()
+print("Step 2 cleaned_value:", cleaned_value, type(cleaned_value))
 
-Experiment 5: Debugging with Tracebacks
+number_value = int(cleaned_value)
+print("Step 3 number_value:", number_value, type(number_value))
 
-Write buggy code, run it, and use the traceback to fix it.
-Focus on one error type per run (e.g., fix TypeError by casting).
-Record: Original error, fix applied, lesson learned.
+computed_value = number_value + 5
+print("Step 4 computed_value:", computed_value, type(computed_value))
+
+output = f"Result={computed_value}"
+print("Step 5 output:", output, type(output))
+
+```
+
+---
+
+- Break it: use before created (NameError)
+
+```python
+
+print("=== BREAK 1: USE BEFORE CREATED ===")
+
+raw_value = " 70 "
+print("raw_value:", raw_value)
+
+# wrong order (number_value not created yet)
+computed_value = number_value + 5
+print("computed_value:", computed_value)
+
+cleaned_value = raw_value.strip()
+number_value = int(cleaned_value)
+
+```
+
+---
+
+- Break it: skip a transformation (ValueError or TypeError)
+
+```python
+
+print("=== BREAK 2: SKIP TRANSFORMATION STEP ===")
+
+raw_value = " 70 "
+cleaned_value = raw_value.strip()
+
+# skip int() conversion
+computed_value = cleaned_value + 5     # should break: str + int
+print("computed_value:", computed_value)
+
+```
+
+---
+
+- Fix it: reorder steps to restore correct flow
+
+```python
+
+print("=== FIX: REORDER + ENSURE VALID INPUT ===")
+
+raw_value = " 70 "
+cleaned_value = raw_value.strip()
+number_value = int(cleaned_value)
+computed_value = number_value + 5
+print("computed_value:", computed_value)
+
+```
+
+---
 
 **Succes criteria:**
 ✔️ I can explain how data flows line-by-line through a mini pipeline
 ✔️ I can predict where a pipeline will break before running it
 ✔️ I can explain why reordering steps fixes the pipeline
-✔️ I recorded at least one reusable data-flow ruled at least one reusable rule about expressions vs statement
+✔️ I recorded at least one reusable data-flow rule
 
 --- 
 

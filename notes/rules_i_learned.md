@@ -52,3 +52,11 @@ x /= 4   # x = 6.0
 - Expressions return values (you can store it, print it, or combine it).
 - Statements control behavior (assign, loop, branch, define, import).
 - SyntaxError happens before running (Python can’t parse your code)
+
+# Rules for data flow and mini pipelines
+
+- Data must exist BEFORE a step uses it (or NameError happens).
+- Expressions produce VALUES; statements perform ACTIONS (assign/print/if/for/def/import).
+- Order matters: pipelines are linear; each step depends on the previous step’s output.
+- Type matters: wrong types cause TypeError OR silent logic bugs.
+- Parentheses change evaluation order and can change results.
