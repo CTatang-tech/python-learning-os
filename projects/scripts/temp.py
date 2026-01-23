@@ -16,3 +16,13 @@ print('"hello".upper()', "hello".upper())
 print("len([1,2,3,4])", len([1, 2, 3, 4]))
 print("3 > 10", 3 > 10)
 print("(10 // 3) + (10 % 3)", (10 // 3) + (10 % 3))
+
+
+age = 25
+
+if age >= 18:
+    print("Adult")
+elif age >= 0:
+    print("Valid age")
+else:
+    print("Invalid")

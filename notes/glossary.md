@@ -165,4 +165,68 @@
 - *Key difference*: Global variables are visible everywhere in the module; local variables are only visible inside their function and cease to exist after the function ends.
 - *Example*: `x = 10` at module level is global; `x = 5` inside a function is local and doesn't affect the global `x`. To tell which is happening: check if the assignment is inside a function (local) or at module level (global); use `global` keyword to modify globals from inside functions.
 
+---
 
+# Term: Mutable
+
+* **Plain definition:**
+  A mutable object is a value that can be **changed in place after it is created**, without creating a new object.
+
+* **Why it matters:**
+  Mutability affects **how Python updates data**, **how variables behave when shared**, and **why changes sometimes appear “unexpected”**—especially in functions, loops, and compound assignments like `+=`.
+
+---
+
+* **Example:**
+  `items = [1, 2]; items += [3]` → the list object is modified in place; `items` now refers to the **same list**, but with new contents.
+
+---
+
+* **Common confusion:** **MUTABLE vs. IMMUTABLE**
+
+---
+
+* **Mutable Object**:
+  An object whose **contents can be changed without rebinding the name**.
+  *(What Python does internally: the object stays in memory, and its internal state is updated; all references to that object see the change.)*
+
+* **Immutable Object**:
+  An object that **cannot be changed after creation**; any “change” creates a new object.
+  *(What Python does internally: Python computes a new value and rebinds the name to a new object.)*
+
+---
+
+* **Why confusing:**
+  Beginners think variables “store values” that change.
+  In reality, **names point to objects**, and mutability determines whether Python **updates the object** or **creates a new one**.
+
+---
+
+* **Key difference:**
+  Mutable objects can change **without rebinding** the variable name; immutable objects require **rebinding** to a new object.
+
+---
+
+* **Example:**
+  `x = 10; x += 1` → `x` is immutable, so Python creates a new integer and rebinds `x`.
+  `lst = [1, 2]; lst.append(3)` → `lst` is mutable, so Python changes the existing list.
+
+---
+
+* **How to tell which is happening:**
+  Ask: *Can this object change internally?*
+
+  * Numbers, strings, tuples → **immutable**
+  * Lists, dicts, sets → **mutable**
+
+  If multiple variables “see” the same change, you’re dealing with a **mutable object**.
+
+---
+
+### One-line mental model
+
+**Mutability decides whether Python updates an object or replaces it with a new one.**
+
+---
+
+### excution jump commands

@@ -10,8 +10,13 @@ This file indexes all evergreen Python concept notes.
 - [Expressions and operators](expressions_operations_and_comparisons.md)
 - [Data flow and mini pipeline](dataflow_and_minipipelines.md)
 - [Control Flow](control_flow.md)
+- [loops](loops.md)
 - [Functions](functions.md)
-- [Data Structures](data_structures.md)
+- [Data Structures](datastructures_lists.md)
+- [Datat Structures](datastructures_tuples.md)
+- [Data Structures](datastructures_dictionaries.md)
+- [Data Structures](datastructures_sets.md)
+- [Data Structures](datastructures_mutability.md)
 - [Errors & Tracebacks](errors_and_tracebacks.md)
 
 ## Object-Oriented Programming
