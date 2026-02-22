@@ -287,3 +287,34 @@ Always group complex conditions with explicit parentheses
 Name rebinding ≠ object mutation
 
 Tuples are for stability, not convenience.
+
+# Mutability + Aliasing
+  
+  + creates new object
+  += (on lists) mutates in 
+  
+# Shallow Copy + Inner Mutation 
+
+Rebinding (b[0] = [...]) ≠ Mutation (b[0].append(...))
+
+.append() / .pop() / .extend() = mutate
+
+= on an index/key = rebind
+
+# Deep copy
+```python
+import copy
+
+a = [[[1], [2]], [[3], [4]]]
+b = copy.deepcopy(a)
+
+b[0][0].append(9)
+
+print(a)
+print(b)
+```
+copy.deepcopy(a) duplicates every level
+
+No shared inner lists remain
+
+Mutating b[0][0] does not affect a

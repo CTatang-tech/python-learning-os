@@ -1,0 +1,24 @@
+{
+  "001": {
+    "name": "Alice Smith",
+    "age": 30,
+    "vaccinated": true,
+    "conditions": [
+      "Diabetes"
+    ]
+  },
+  "002": {
+    "name": "Bob Johnson",
+    "age": null,
+    "vaccinated": false,
+    "conditions": []
+  },
+  "003": {
+    "name": "Cara Doe",
+    "age": 22,
+    "vaccinated": null,
+    "conditions": [
+      "Asthma"
+    ]
+  }
+}

@@ -230,3 +230,24 @@
 ---
 
 ### excution jump commands
+
+### _init_ method
+
+used to setup a new object when it is first created.
+
+For example, if you are making a Robot toy, __init__ is where you decide its name and what color it should be.
+
+The "Self" Argument: The first part of __init__ is always self. This is like the robot pointing to itself to say, "These are my batteries and this is my name".
+Setting Attributes: Its main job is to take information (like a name or age) and save it inside the object so it stays there.
+
+### _hash_ vs _eq_
+
+**__eq__(self, other): Equality**
+defines the logic for the == operator.
+
+**__hash__(self): Hashability**
+returns an integer hash value used to "bin" objects in hash tables (like dict and set)
+
+overriding __eq__ automatically makes a class unhashable (sets __hash__ to None). To make your custom object a dictionary key or a set member, you must implement both
+
+
